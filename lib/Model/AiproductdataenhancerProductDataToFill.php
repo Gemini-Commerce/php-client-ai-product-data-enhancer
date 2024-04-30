@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerFillProductDataRequest
+ * AiproductdataenhancerProductDataToFill
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
 
 /**
- * AiproductdataenhancerFillProductDataRequest Class Doc Comment
+ * AiproductdataenhancerProductDataToFill Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\AiProductDataEnhancer
@@ -40,7 +40,7 @@ use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class AiproductdataenhancerFillProductDataRequest implements ModelInterface, ArrayAccess, \JsonSerializable
+class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'aiproductdataenhancerFillProductDataRequest';
+    protected static $openAPIModelName = 'aiproductdataenhancerProductDataToFill';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,12 +59,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tenant_id' => 'string',
-        'language_code' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode',
-        'product_information' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerProductInformation',
-        'product_data_to_fill' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerProductDataToFill[]',
-        'domains_to_include' => 'string[]',
-        'domains_to_exclude' => 'string[]'
+        'name' => 'string',
+        'value_set' => 'string[]'
     ];
 
     /**
@@ -75,12 +71,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tenant_id' => null,
-        'language_code' => null,
-        'product_information' => null,
-        'product_data_to_fill' => null,
-        'domains_to_include' => null,
-        'domains_to_exclude' => null
+        'name' => null,
+        'value_set' => null
     ];
 
     /**
@@ -89,12 +81,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'tenant_id' => false,
-        'language_code' => false,
-        'product_information' => false,
-        'product_data_to_fill' => false,
-        'domains_to_include' => false,
-        'domains_to_exclude' => false
+        'name' => false,
+        'value_set' => false
     ];
 
     /**
@@ -183,12 +171,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
      * @var string[]
      */
     protected static $attributeMap = [
-        'tenant_id' => 'tenantId',
-        'language_code' => 'languageCode',
-        'product_information' => 'productInformation',
-        'product_data_to_fill' => 'productDataToFill',
-        'domains_to_include' => 'domainsToInclude',
-        'domains_to_exclude' => 'domainsToExclude'
+        'name' => 'name',
+        'value_set' => 'valueSet'
     ];
 
     /**
@@ -197,12 +181,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
      * @var string[]
      */
     protected static $setters = [
-        'tenant_id' => 'setTenantId',
-        'language_code' => 'setLanguageCode',
-        'product_information' => 'setProductInformation',
-        'product_data_to_fill' => 'setProductDataToFill',
-        'domains_to_include' => 'setDomainsToInclude',
-        'domains_to_exclude' => 'setDomainsToExclude'
+        'name' => 'setName',
+        'value_set' => 'setValueSet'
     ];
 
     /**
@@ -211,12 +191,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
      * @var string[]
      */
     protected static $getters = [
-        'tenant_id' => 'getTenantId',
-        'language_code' => 'getLanguageCode',
-        'product_information' => 'getProductInformation',
-        'product_data_to_fill' => 'getProductDataToFill',
-        'domains_to_include' => 'getDomainsToInclude',
-        'domains_to_exclude' => 'getDomainsToExclude'
+        'name' => 'getName',
+        'value_set' => 'getValueSet'
     ];
 
     /**
@@ -283,12 +259,8 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('tenant_id', $data ?? [], null);
-        $this->setIfExists('language_code', $data ?? [], null);
-        $this->setIfExists('product_information', $data ?? [], null);
-        $this->setIfExists('product_data_to_fill', $data ?? [], null);
-        $this->setIfExists('domains_to_include', $data ?? [], null);
-        $this->setIfExists('domains_to_exclude', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('value_set', $data ?? [], null);
     }
 
     /**
@@ -334,163 +306,55 @@ class AiproductdataenhancerFillProductDataRequest implements ModelInterface, Arr
 
 
     /**
-     * Gets tenant_id
+     * Gets name
      *
      * @return string|null
      */
-    public function getTenantId()
+    public function getName()
     {
-        return $this->container['tenant_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets tenant_id
+     * Sets name
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setTenantId($tenant_id)
+    public function setName($name)
     {
-        if (is_null($tenant_id)) {
-            throw new \InvalidArgumentException('non-nullable tenant_id cannot be null');
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        $this->container['tenant_id'] = $tenant_id;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets language_code
-     *
-     * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null
-     */
-    public function getLanguageCode()
-    {
-        return $this->container['language_code'];
-    }
-
-    /**
-     * Sets language_code
-     *
-     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null $language_code language_code
-     *
-     * @return self
-     */
-    public function setLanguageCode($language_code)
-    {
-        if (is_null($language_code)) {
-            throw new \InvalidArgumentException('non-nullable language_code cannot be null');
-        }
-        $this->container['language_code'] = $language_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets product_information
-     *
-     * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerProductInformation|null
-     */
-    public function getProductInformation()
-    {
-        return $this->container['product_information'];
-    }
-
-    /**
-     * Sets product_information
-     *
-     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerProductInformation|null $product_information product_information
-     *
-     * @return self
-     */
-    public function setProductInformation($product_information)
-    {
-        if (is_null($product_information)) {
-            throw new \InvalidArgumentException('non-nullable product_information cannot be null');
-        }
-        $this->container['product_information'] = $product_information;
-
-        return $this;
-    }
-
-    /**
-     * Gets product_data_to_fill
-     *
-     * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerProductDataToFill[]|null
-     */
-    public function getProductDataToFill()
-    {
-        return $this->container['product_data_to_fill'];
-    }
-
-    /**
-     * Sets product_data_to_fill
-     *
-     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerProductDataToFill[]|null $product_data_to_fill product_data_to_fill
-     *
-     * @return self
-     */
-    public function setProductDataToFill($product_data_to_fill)
-    {
-        if (is_null($product_data_to_fill)) {
-            throw new \InvalidArgumentException('non-nullable product_data_to_fill cannot be null');
-        }
-        $this->container['product_data_to_fill'] = $product_data_to_fill;
-
-        return $this;
-    }
-
-    /**
-     * Gets domains_to_include
+     * Gets value_set
      *
      * @return string[]|null
      */
-    public function getDomainsToInclude()
+    public function getValueSet()
     {
-        return $this->container['domains_to_include'];
+        return $this->container['value_set'];
     }
 
     /**
-     * Sets domains_to_include
+     * Sets value_set
      *
-     * @param string[]|null $domains_to_include domains_to_include
+     * @param string[]|null $value_set value_set
      *
      * @return self
      */
-    public function setDomainsToInclude($domains_to_include)
+    public function setValueSet($value_set)
     {
-        if (is_null($domains_to_include)) {
-            throw new \InvalidArgumentException('non-nullable domains_to_include cannot be null');
+        if (is_null($value_set)) {
+            throw new \InvalidArgumentException('non-nullable value_set cannot be null');
         }
-        $this->container['domains_to_include'] = $domains_to_include;
-
-        return $this;
-    }
-
-    /**
-     * Gets domains_to_exclude
-     *
-     * @return string[]|null
-     */
-    public function getDomainsToExclude()
-    {
-        return $this->container['domains_to_exclude'];
-    }
-
-    /**
-     * Sets domains_to_exclude
-     *
-     * @param string[]|null $domains_to_exclude domains_to_exclude
-     *
-     * @return self
-     */
-    public function setDomainsToExclude($domains_to_exclude)
-    {
-        if (is_null($domains_to_exclude)) {
-            throw new \InvalidArgumentException('non-nullable domains_to_exclude cannot be null');
-        }
-        $this->container['domains_to_exclude'] = $domains_to_exclude;
+        $this->container['value_set'] = $value_set;
 
         return $this;
     }

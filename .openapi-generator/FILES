@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
@@ -8,6 +7,7 @@ docs/Api/AiProductDataEnhancerApi.md
 docs/Model/AiproductdataenhancerFillProductDataRequest.md
 docs/Model/AiproductdataenhancerFillProductDataResponse.md
 docs/Model/AiproductdataenhancerLanguageCode.md
+docs/Model/AiproductdataenhancerProductDataToFill.md
 docs/Model/AiproductdataenhancerProductInformation.md
 docs/Model/ProtobufAny.md
 docs/Model/RpcStatus.md
@@ -19,6 +19,7 @@ lib/HeaderSelector.php
 lib/Model/AiproductdataenhancerFillProductDataRequest.php
 lib/Model/AiproductdataenhancerFillProductDataResponse.php
 lib/Model/AiproductdataenhancerLanguageCode.php
+lib/Model/AiproductdataenhancerProductDataToFill.php
 lib/Model/AiproductdataenhancerProductInformation.php
 lib/Model/ModelInterface.php
 lib/Model/ProtobufAny.php
@@ -29,6 +30,7 @@ test/Api/AiProductDataEnhancerApiTest.php
 test/Model/AiproductdataenhancerFillProductDataRequestTest.php
 test/Model/AiproductdataenhancerFillProductDataResponseTest.php
 test/Model/AiproductdataenhancerLanguageCodeTest.php
+test/Model/AiproductdataenhancerProductDataToFillTest.php
 test/Model/AiproductdataenhancerProductInformationTest.php
 test/Model/ProtobufAnyTest.php
 test/Model/RpcStatusTest.php
