@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerProductDataToFillTest
+ * AiproductdataenhancerFillProductDataCheckResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace GeminiCommerce\AiProductDataEnhancer\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AiproductdataenhancerProductDataToFillTest Class Doc Comment
+ * AiproductdataenhancerFillProductDataCheckResponseTest Class Doc Comment
  *
  * @category    Class
- * @description AiproductdataenhancerProductDataToFill
+ * @description AiproductdataenhancerFillProductDataCheckResponse
  * @package     GeminiCommerce\AiProductDataEnhancer
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AiproductdataenhancerProductDataToFillTest extends TestCase
+class AiproductdataenhancerFillProductDataCheckResponseTest extends TestCase
 {
 
     /**
@@ -71,36 +71,54 @@ class AiproductdataenhancerProductDataToFillTest extends TestCase
     }
 
     /**
-     * Test "AiproductdataenhancerProductDataToFill"
+     * Test "AiproductdataenhancerFillProductDataCheckResponse"
      */
-    public function testAiproductdataenhancerProductDataToFill()
+    public function testAiproductdataenhancerFillProductDataCheckResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "product_data_filled"
      */
-    public function testPropertyName()
+    public function testPropertyProductDataFilled()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "value_set"
+     * Test attribute "confidence_rate"
      */
-    public function testPropertyValueSet()
+    public function testPropertyConfidenceRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "metadata"
+     * Test attribute "completion_rate"
      */
-    public function testPropertyMetadata()
+    public function testPropertyCompletionRate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "error"
+     */
+    public function testPropertyError()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

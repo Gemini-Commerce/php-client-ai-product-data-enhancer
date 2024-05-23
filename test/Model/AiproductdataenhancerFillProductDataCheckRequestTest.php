@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerProductDataToFillTest
+ * AiproductdataenhancerFillProductDataCheckRequestTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace GeminiCommerce\AiProductDataEnhancer\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AiproductdataenhancerProductDataToFillTest Class Doc Comment
+ * AiproductdataenhancerFillProductDataCheckRequestTest Class Doc Comment
  *
  * @category    Class
- * @description AiproductdataenhancerProductDataToFill
+ * @description AiproductdataenhancerFillProductDataCheckRequest
  * @package     GeminiCommerce\AiProductDataEnhancer
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AiproductdataenhancerProductDataToFillTest extends TestCase
+class AiproductdataenhancerFillProductDataCheckRequestTest extends TestCase
 {
 
     /**
@@ -71,36 +71,27 @@ class AiproductdataenhancerProductDataToFillTest extends TestCase
     }
 
     /**
-     * Test "AiproductdataenhancerProductDataToFill"
+     * Test "AiproductdataenhancerFillProductDataCheckRequest"
      */
-    public function testAiproductdataenhancerProductDataToFill()
+    public function testAiproductdataenhancerFillProductDataCheckRequest()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "tenant_id"
      */
-    public function testPropertyName()
+    public function testPropertyTenantId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "value_set"
+     * Test attribute "job_id"
      */
-    public function testPropertyValueSet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "metadata"
-     */
-    public function testPropertyMetadata()
+    public function testPropertyJobId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

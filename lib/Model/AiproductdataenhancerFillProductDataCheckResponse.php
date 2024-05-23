@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerProductDataToFill
+ * AiproductdataenhancerFillProductDataCheckResponse
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
 
 /**
- * AiproductdataenhancerProductDataToFill Class Doc Comment
+ * AiproductdataenhancerFillProductDataCheckResponse Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\AiProductDataEnhancer
@@ -40,7 +40,7 @@ use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAccess, \JsonSerializable
+class AiproductdataenhancerFillProductDataCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'aiproductdataenhancerProductDataToFill';
+    protected static $openAPIModelName = 'aiproductdataenhancerFillProductDataCheckResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'value_set' => 'string[]',
-        'metadata' => 'array<string,string>'
+        'product_data_filled' => 'array<string,string>',
+        'confidence_rate' => 'float',
+        'completion_rate' => 'float',
+        'status' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerJobStatus',
+        'error' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerError'
     ];
 
     /**
@@ -72,9 +74,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'value_set' => null,
-        'metadata' => null
+        'product_data_filled' => null,
+        'confidence_rate' => 'float',
+        'completion_rate' => 'float',
+        'status' => null,
+        'error' => null
     ];
 
     /**
@@ -83,9 +87,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-        'value_set' => false,
-        'metadata' => false
+        'product_data_filled' => false,
+        'confidence_rate' => false,
+        'completion_rate' => false,
+        'status' => false,
+        'error' => false
     ];
 
     /**
@@ -174,9 +180,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'value_set' => 'valueSet',
-        'metadata' => 'metadata'
+        'product_data_filled' => 'productDataFilled',
+        'confidence_rate' => 'confidenceRate',
+        'completion_rate' => 'completionRate',
+        'status' => 'status',
+        'error' => 'error'
     ];
 
     /**
@@ -185,9 +193,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'value_set' => 'setValueSet',
-        'metadata' => 'setMetadata'
+        'product_data_filled' => 'setProductDataFilled',
+        'confidence_rate' => 'setConfidenceRate',
+        'completion_rate' => 'setCompletionRate',
+        'status' => 'setStatus',
+        'error' => 'setError'
     ];
 
     /**
@@ -196,9 +206,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'value_set' => 'getValueSet',
-        'metadata' => 'getMetadata'
+        'product_data_filled' => 'getProductDataFilled',
+        'confidence_rate' => 'getConfidenceRate',
+        'completion_rate' => 'getCompletionRate',
+        'status' => 'getStatus',
+        'error' => 'getError'
     ];
 
     /**
@@ -265,9 +277,11 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('value_set', $data ?? [], null);
-        $this->setIfExists('metadata', $data ?? [], null);
+        $this->setIfExists('product_data_filled', $data ?? [], null);
+        $this->setIfExists('confidence_rate', $data ?? [], null);
+        $this->setIfExists('completion_rate', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('error', $data ?? [], null);
     }
 
     /**
@@ -313,82 +327,136 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets value_set
-     *
-     * @return string[]|null
-     */
-    public function getValueSet()
-    {
-        return $this->container['value_set'];
-    }
-
-    /**
-     * Sets value_set
-     *
-     * @param string[]|null $value_set value_set
-     *
-     * @return self
-     */
-    public function setValueSet($value_set)
-    {
-        if (is_null($value_set)) {
-            throw new \InvalidArgumentException('non-nullable value_set cannot be null');
-        }
-        $this->container['value_set'] = $value_set;
-
-        return $this;
-    }
-
-    /**
-     * Gets metadata
+     * Gets product_data_filled
      *
      * @return array<string,string>|null
      */
-    public function getMetadata()
+    public function getProductDataFilled()
     {
-        return $this->container['metadata'];
+        return $this->container['product_data_filled'];
     }
 
     /**
-     * Sets metadata
+     * Sets product_data_filled
      *
-     * @param array<string,string>|null $metadata Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
+     * @param array<string,string>|null $product_data_filled product_data_filled
      *
      * @return self
      */
-    public function setMetadata($metadata)
+    public function setProductDataFilled($product_data_filled)
     {
-        if (is_null($metadata)) {
-            throw new \InvalidArgumentException('non-nullable metadata cannot be null');
+        if (is_null($product_data_filled)) {
+            throw new \InvalidArgumentException('non-nullable product_data_filled cannot be null');
         }
-        $this->container['metadata'] = $metadata;
+        $this->container['product_data_filled'] = $product_data_filled;
+
+        return $this;
+    }
+
+    /**
+     * Gets confidence_rate
+     *
+     * @return float|null
+     */
+    public function getConfidenceRate()
+    {
+        return $this->container['confidence_rate'];
+    }
+
+    /**
+     * Sets confidence_rate
+     *
+     * @param float|null $confidence_rate confidence_rate
+     *
+     * @return self
+     */
+    public function setConfidenceRate($confidence_rate)
+    {
+        if (is_null($confidence_rate)) {
+            throw new \InvalidArgumentException('non-nullable confidence_rate cannot be null');
+        }
+        $this->container['confidence_rate'] = $confidence_rate;
+
+        return $this;
+    }
+
+    /**
+     * Gets completion_rate
+     *
+     * @return float|null
+     */
+    public function getCompletionRate()
+    {
+        return $this->container['completion_rate'];
+    }
+
+    /**
+     * Sets completion_rate
+     *
+     * @param float|null $completion_rate completion_rate
+     *
+     * @return self
+     */
+    public function setCompletionRate($completion_rate)
+    {
+        if (is_null($completion_rate)) {
+            throw new \InvalidArgumentException('non-nullable completion_rate cannot be null');
+        }
+        $this->container['completion_rate'] = $completion_rate;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerJobStatus|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerJobStatus|null $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        }
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets error
+     *
+     * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerError|null
+     */
+    public function getError()
+    {
+        return $this->container['error'];
+    }
+
+    /**
+     * Sets error
+     *
+     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerError|null $error error
+     *
+     * @return self
+     */
+    public function setError($error)
+    {
+        if (is_null($error)) {
+            throw new \InvalidArgumentException('non-nullable error cannot be null');
+        }
+        $this->container['error'] = $error;
 
         return $this;
     }

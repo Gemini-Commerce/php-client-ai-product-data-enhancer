@@ -59,9 +59,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product_data_filled' => 'array<string,string>',
-        'confidence_rate' => 'float',
-        'completion_rate' => 'float'
+        'job_id' => 'string'
     ];
 
     /**
@@ -72,9 +70,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'product_data_filled' => null,
-        'confidence_rate' => 'float',
-        'completion_rate' => 'float'
+        'job_id' => null
     ];
 
     /**
@@ -83,9 +79,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'product_data_filled' => false,
-        'confidence_rate' => false,
-        'completion_rate' => false
+        'job_id' => false
     ];
 
     /**
@@ -174,9 +168,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_data_filled' => 'productDataFilled',
-        'confidence_rate' => 'confidenceRate',
-        'completion_rate' => 'completionRate'
+        'job_id' => 'jobId'
     ];
 
     /**
@@ -185,9 +177,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
      * @var string[]
      */
     protected static $setters = [
-        'product_data_filled' => 'setProductDataFilled',
-        'confidence_rate' => 'setConfidenceRate',
-        'completion_rate' => 'setCompletionRate'
+        'job_id' => 'setJobId'
     ];
 
     /**
@@ -196,9 +186,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
      * @var string[]
      */
     protected static $getters = [
-        'product_data_filled' => 'getProductDataFilled',
-        'confidence_rate' => 'getConfidenceRate',
-        'completion_rate' => 'getCompletionRate'
+        'job_id' => 'getJobId'
     ];
 
     /**
@@ -265,9 +253,7 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('product_data_filled', $data ?? [], null);
-        $this->setIfExists('confidence_rate', $data ?? [], null);
-        $this->setIfExists('completion_rate', $data ?? [], null);
+        $this->setIfExists('job_id', $data ?? [], null);
     }
 
     /**
@@ -313,82 +299,28 @@ class AiproductdataenhancerFillProductDataResponse implements ModelInterface, Ar
 
 
     /**
-     * Gets product_data_filled
+     * Gets job_id
      *
-     * @return array<string,string>|null
+     * @return string|null
      */
-    public function getProductDataFilled()
+    public function getJobId()
     {
-        return $this->container['product_data_filled'];
+        return $this->container['job_id'];
     }
 
     /**
-     * Sets product_data_filled
+     * Sets job_id
      *
-     * @param array<string,string>|null $product_data_filled product_data_filled
+     * @param string|null $job_id job_id
      *
      * @return self
      */
-    public function setProductDataFilled($product_data_filled)
+    public function setJobId($job_id)
     {
-        if (is_null($product_data_filled)) {
-            throw new \InvalidArgumentException('non-nullable product_data_filled cannot be null');
+        if (is_null($job_id)) {
+            throw new \InvalidArgumentException('non-nullable job_id cannot be null');
         }
-        $this->container['product_data_filled'] = $product_data_filled;
-
-        return $this;
-    }
-
-    /**
-     * Gets confidence_rate
-     *
-     * @return float|null
-     */
-    public function getConfidenceRate()
-    {
-        return $this->container['confidence_rate'];
-    }
-
-    /**
-     * Sets confidence_rate
-     *
-     * @param float|null $confidence_rate confidence_rate
-     *
-     * @return self
-     */
-    public function setConfidenceRate($confidence_rate)
-    {
-        if (is_null($confidence_rate)) {
-            throw new \InvalidArgumentException('non-nullable confidence_rate cannot be null');
-        }
-        $this->container['confidence_rate'] = $confidence_rate;
-
-        return $this;
-    }
-
-    /**
-     * Gets completion_rate
-     *
-     * @return float|null
-     */
-    public function getCompletionRate()
-    {
-        return $this->container['completion_rate'];
-    }
-
-    /**
-     * Sets completion_rate
-     *
-     * @param float|null $completion_rate completion_rate
-     *
-     * @return self
-     */
-    public function setCompletionRate($completion_rate)
-    {
-        if (is_null($completion_rate)) {
-            throw new \InvalidArgumentException('non-nullable completion_rate cannot be null');
-        }
-        $this->container['completion_rate'] = $completion_rate;
+        $this->container['job_id'] = $job_id;
 
         return $this;
     }

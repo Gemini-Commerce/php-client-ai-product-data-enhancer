@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerProductDataToFill
+ * AiproductdataenhancerError
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
 
 /**
- * AiproductdataenhancerProductDataToFill Class Doc Comment
+ * AiproductdataenhancerError Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\AiProductDataEnhancer
@@ -40,7 +40,7 @@ use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAccess, \JsonSerializable
+class AiproductdataenhancerError implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'aiproductdataenhancerProductDataToFill';
+    protected static $openAPIModelName = 'aiproductdataenhancerError';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'value_set' => 'string[]',
-        'metadata' => 'array<string,string>'
+        'code' => 'string',
+        'message' => 'string'
     ];
 
     /**
@@ -72,9 +71,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'value_set' => null,
-        'metadata' => null
+        'code' => null,
+        'message' => null
     ];
 
     /**
@@ -83,9 +81,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-        'value_set' => false,
-        'metadata' => false
+        'code' => false,
+        'message' => false
     ];
 
     /**
@@ -174,9 +171,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'value_set' => 'valueSet',
-        'metadata' => 'metadata'
+        'code' => 'code',
+        'message' => 'message'
     ];
 
     /**
@@ -185,9 +181,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'value_set' => 'setValueSet',
-        'metadata' => 'setMetadata'
+        'code' => 'setCode',
+        'message' => 'setMessage'
     ];
 
     /**
@@ -196,9 +191,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'value_set' => 'getValueSet',
-        'metadata' => 'getMetadata'
+        'code' => 'getCode',
+        'message' => 'getMessage'
     ];
 
     /**
@@ -265,9 +259,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('value_set', $data ?? [], null);
-        $this->setIfExists('metadata', $data ?? [], null);
+        $this->setIfExists('code', $data ?? [], null);
+        $this->setIfExists('message', $data ?? [], null);
     }
 
     /**
@@ -313,82 +306,55 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets name
+     * Gets code
      *
      * @return string|null
      */
-    public function getName()
+    public function getCode()
     {
-        return $this->container['name'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets name
+     * Sets code
      *
-     * @param string|null $name name
+     * @param string|null $code code
      *
      * @return self
      */
-    public function setName($name)
+    public function setCode($code)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($code)) {
+            throw new \InvalidArgumentException('non-nullable code cannot be null');
         }
-        $this->container['name'] = $name;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets value_set
+     * Gets message
      *
-     * @return string[]|null
+     * @return string|null
      */
-    public function getValueSet()
+    public function getMessage()
     {
-        return $this->container['value_set'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets value_set
+     * Sets message
      *
-     * @param string[]|null $value_set value_set
+     * @param string|null $message message
      *
      * @return self
      */
-    public function setValueSet($value_set)
+    public function setMessage($message)
     {
-        if (is_null($value_set)) {
-            throw new \InvalidArgumentException('non-nullable value_set cannot be null');
+        if (is_null($message)) {
+            throw new \InvalidArgumentException('non-nullable message cannot be null');
         }
-        $this->container['value_set'] = $value_set;
-
-        return $this;
-    }
-
-    /**
-     * Gets metadata
-     *
-     * @return array<string,string>|null
-     */
-    public function getMetadata()
-    {
-        return $this->container['metadata'];
-    }
-
-    /**
-     * Sets metadata
-     *
-     * @param array<string,string>|null $metadata Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
-     *
-     * @return self
-     */
-    public function setMetadata($metadata)
-    {
-        if (is_null($metadata)) {
-            throw new \InvalidArgumentException('non-nullable metadata cannot be null');
-        }
-        $this->container['metadata'] = $metadata;
+        $this->container['message'] = $message;
 
         return $this;
     }

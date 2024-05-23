@@ -80,27 +80,9 @@ class AiproductdataenhancerFillProductDataResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "product_data_filled"
+     * Test attribute "job_id"
      */
-    public function testPropertyProductDataFilled()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "confidence_rate"
-     */
-    public function testPropertyConfidenceRate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "completion_rate"
-     */
-    public function testPropertyCompletionRate()
+    public function testPropertyJobId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

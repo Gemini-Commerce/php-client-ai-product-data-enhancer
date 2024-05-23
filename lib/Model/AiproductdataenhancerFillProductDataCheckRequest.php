@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerProductDataToFill
+ * AiproductdataenhancerFillProductDataCheckRequest
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
 
 /**
- * AiproductdataenhancerProductDataToFill Class Doc Comment
+ * AiproductdataenhancerFillProductDataCheckRequest Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\AiProductDataEnhancer
@@ -40,7 +40,7 @@ use \GeminiCommerce\AiProductDataEnhancer\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAccess, \JsonSerializable
+class AiproductdataenhancerFillProductDataCheckRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'aiproductdataenhancerProductDataToFill';
+    protected static $openAPIModelName = 'aiproductdataenhancerFillProductDataCheckRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'value_set' => 'string[]',
-        'metadata' => 'array<string,string>'
+        'tenant_id' => 'string',
+        'job_id' => 'string'
     ];
 
     /**
@@ -72,9 +71,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'value_set' => null,
-        'metadata' => null
+        'tenant_id' => null,
+        'job_id' => null
     ];
 
     /**
@@ -83,9 +81,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-        'value_set' => false,
-        'metadata' => false
+        'tenant_id' => false,
+        'job_id' => false
     ];
 
     /**
@@ -174,9 +171,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'value_set' => 'valueSet',
-        'metadata' => 'metadata'
+        'tenant_id' => 'tenantId',
+        'job_id' => 'jobId'
     ];
 
     /**
@@ -185,9 +181,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'value_set' => 'setValueSet',
-        'metadata' => 'setMetadata'
+        'tenant_id' => 'setTenantId',
+        'job_id' => 'setJobId'
     ];
 
     /**
@@ -196,9 +191,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'value_set' => 'getValueSet',
-        'metadata' => 'getMetadata'
+        'tenant_id' => 'getTenantId',
+        'job_id' => 'getJobId'
     ];
 
     /**
@@ -265,9 +259,8 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('value_set', $data ?? [], null);
-        $this->setIfExists('metadata', $data ?? [], null);
+        $this->setIfExists('tenant_id', $data ?? [], null);
+        $this->setIfExists('job_id', $data ?? [], null);
     }
 
     /**
@@ -313,82 +306,55 @@ class AiproductdataenhancerProductDataToFill implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets name
+     * Gets tenant_id
      *
      * @return string|null
      */
-    public function getName()
+    public function getTenantId()
     {
-        return $this->container['name'];
+        return $this->container['tenant_id'];
     }
 
     /**
-     * Sets name
+     * Sets tenant_id
      *
-     * @param string|null $name name
+     * @param string|null $tenant_id tenant_id
      *
      * @return self
      */
-    public function setName($name)
+    public function setTenantId($tenant_id)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($tenant_id)) {
+            throw new \InvalidArgumentException('non-nullable tenant_id cannot be null');
         }
-        $this->container['name'] = $name;
+        $this->container['tenant_id'] = $tenant_id;
 
         return $this;
     }
 
     /**
-     * Gets value_set
+     * Gets job_id
      *
-     * @return string[]|null
+     * @return string|null
      */
-    public function getValueSet()
+    public function getJobId()
     {
-        return $this->container['value_set'];
+        return $this->container['job_id'];
     }
 
     /**
-     * Sets value_set
+     * Sets job_id
      *
-     * @param string[]|null $value_set value_set
+     * @param string|null $job_id job_id
      *
      * @return self
      */
-    public function setValueSet($value_set)
+    public function setJobId($job_id)
     {
-        if (is_null($value_set)) {
-            throw new \InvalidArgumentException('non-nullable value_set cannot be null');
+        if (is_null($job_id)) {
+            throw new \InvalidArgumentException('non-nullable job_id cannot be null');
         }
-        $this->container['value_set'] = $value_set;
-
-        return $this;
-    }
-
-    /**
-     * Gets metadata
-     *
-     * @return array<string,string>|null
-     */
-    public function getMetadata()
-    {
-        return $this->container['metadata'];
-    }
-
-    /**
-     * Sets metadata
-     *
-     * @param array<string,string>|null $metadata Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
-     *
-     * @return self
-     */
-    public function setMetadata($metadata)
-    {
-        if (is_null($metadata)) {
-            throw new \InvalidArgumentException('non-nullable metadata cannot be null');
-        }
-        $this->container['metadata'] = $metadata;
+        $this->container['job_id'] = $job_id;
 
         return $this;
     }

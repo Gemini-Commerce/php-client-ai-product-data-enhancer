@@ -1,6 +1,6 @@
 <?php
 /**
- * AiproductdataenhancerProductDataToFillTest
+ * AiproductdataenhancerErrorTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace GeminiCommerce\AiProductDataEnhancer\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AiproductdataenhancerProductDataToFillTest Class Doc Comment
+ * AiproductdataenhancerErrorTest Class Doc Comment
  *
  * @category    Class
- * @description AiproductdataenhancerProductDataToFill
+ * @description AiproductdataenhancerError
  * @package     GeminiCommerce\AiProductDataEnhancer
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AiproductdataenhancerProductDataToFillTest extends TestCase
+class AiproductdataenhancerErrorTest extends TestCase
 {
 
     /**
@@ -71,36 +71,27 @@ class AiproductdataenhancerProductDataToFillTest extends TestCase
     }
 
     /**
-     * Test "AiproductdataenhancerProductDataToFill"
+     * Test "AiproductdataenhancerError"
      */
-    public function testAiproductdataenhancerProductDataToFill()
+    public function testAiproductdataenhancerError()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "code"
      */
-    public function testPropertyName()
+    public function testPropertyCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "value_set"
+     * Test attribute "message"
      */
-    public function testPropertyValueSet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "metadata"
-     */
-    public function testPropertyMetadata()
+    public function testPropertyMessage()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
