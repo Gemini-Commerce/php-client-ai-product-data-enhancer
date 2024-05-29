@@ -60,7 +60,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
       */
     protected static $openAPITypes = [
         'tenant_id' => 'string',
-        'language_code' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode',
+        'target_language' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode',
+        'source_language' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode',
         'data_to_translate' => '\GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerDataToTranslate[]'
     ];
 
@@ -73,7 +74,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
       */
     protected static $openAPIFormats = [
         'tenant_id' => null,
-        'language_code' => null,
+        'target_language' => null,
+        'source_language' => null,
         'data_to_translate' => null
     ];
 
@@ -84,7 +86,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
       */
     protected static array $openAPINullables = [
         'tenant_id' => false,
-        'language_code' => false,
+        'target_language' => false,
+        'source_language' => false,
         'data_to_translate' => false
     ];
 
@@ -175,7 +178,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
      */
     protected static $attributeMap = [
         'tenant_id' => 'tenantId',
-        'language_code' => 'languageCode',
+        'target_language' => 'targetLanguage',
+        'source_language' => 'sourceLanguage',
         'data_to_translate' => 'dataToTranslate'
     ];
 
@@ -186,7 +190,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
      */
     protected static $setters = [
         'tenant_id' => 'setTenantId',
-        'language_code' => 'setLanguageCode',
+        'target_language' => 'setTargetLanguage',
+        'source_language' => 'setSourceLanguage',
         'data_to_translate' => 'setDataToTranslate'
     ];
 
@@ -197,7 +202,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
      */
     protected static $getters = [
         'tenant_id' => 'getTenantId',
-        'language_code' => 'getLanguageCode',
+        'target_language' => 'getTargetLanguage',
+        'source_language' => 'getSourceLanguage',
         'data_to_translate' => 'getDataToTranslate'
     ];
 
@@ -266,7 +272,8 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
     public function __construct(array $data = null)
     {
         $this->setIfExists('tenant_id', $data ?? [], null);
-        $this->setIfExists('language_code', $data ?? [], null);
+        $this->setIfExists('target_language', $data ?? [], null);
+        $this->setIfExists('source_language', $data ?? [], null);
         $this->setIfExists('data_to_translate', $data ?? [], null);
     }
 
@@ -340,28 +347,55 @@ class AiproductdataenhancerTranslateDataRequest implements ModelInterface, Array
     }
 
     /**
-     * Gets language_code
+     * Gets target_language
      *
      * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null
      */
-    public function getLanguageCode()
+    public function getTargetLanguage()
     {
-        return $this->container['language_code'];
+        return $this->container['target_language'];
     }
 
     /**
-     * Sets language_code
+     * Sets target_language
      *
-     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null $language_code language_code
+     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null $target_language target_language
      *
      * @return self
      */
-    public function setLanguageCode($language_code)
+    public function setTargetLanguage($target_language)
     {
-        if (is_null($language_code)) {
-            throw new \InvalidArgumentException('non-nullable language_code cannot be null');
+        if (is_null($target_language)) {
+            throw new \InvalidArgumentException('non-nullable target_language cannot be null');
         }
-        $this->container['language_code'] = $language_code;
+        $this->container['target_language'] = $target_language;
+
+        return $this;
+    }
+
+    /**
+     * Gets source_language
+     *
+     * @return \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null
+     */
+    public function getSourceLanguage()
+    {
+        return $this->container['source_language'];
+    }
+
+    /**
+     * Sets source_language
+     *
+     * @param \GeminiCommerce\AiProductDataEnhancer\Model\AiproductdataenhancerLanguageCode|null $source_language source_language
+     *
+     * @return self
+     */
+    public function setSourceLanguage($source_language)
+    {
+        if (is_null($source_language)) {
+            throw new \InvalidArgumentException('non-nullable source_language cannot be null');
+        }
+        $this->container['source_language'] = $source_language;
 
         return $this;
     }

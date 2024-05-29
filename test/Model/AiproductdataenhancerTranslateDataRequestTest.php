@@ -89,9 +89,18 @@ class AiproductdataenhancerTranslateDataRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "language_code"
+     * Test attribute "target_language"
      */
-    public function testPropertyLanguageCode()
+    public function testPropertyTargetLanguage()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "source_language"
+     */
+    public function testPropertySourceLanguage()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
